@@ -8,10 +8,4 @@ public class CubeBehaviour : MonoBehaviour {
             GetComponent<Collider>().enabled = false;
         }
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
