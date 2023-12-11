@@ -3,11 +3,16 @@ using UnityEngine;
 public class MazeGenerator : MonoBehaviour {
     public int width = 100;
     public int height = 100;
+    public int large = 100;
+    public int detail = 20;
+    public int seed = 300000;
     public GameObject wallPrefab, pathPrefab;
     public static int[,] maze;
 
     private void Start() {
         GenerateMaze();
+        WallsGenerator wallsGenerator = new WallsGenerator();
+        wallsGenerator.Generate(wallPrefab, width, height, large, detail, seed);
     }
 
     private void GenerateMaze() {
