@@ -1,3 +1,4 @@
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class MazeGenerator : MonoBehaviour {
@@ -8,6 +9,7 @@ public class MazeGenerator : MonoBehaviour {
     public int seed = 300000;
     public GameObject wallPrefab, pathPrefab;
     public static int[,] maze;
+    public static GameObject[,] mazeObj;
 
     private void Start() {
         GenerateMaze();
@@ -17,6 +19,7 @@ public class MazeGenerator : MonoBehaviour {
 
     private void GenerateMaze() {
         maze = new int[width, height];
+        mazeObj = new GameObject[width, height];
 
         for (int i = 0; i < width; i++)
             for (int j = 0; j < height; j++)
@@ -60,8 +63,8 @@ public class MazeGenerator : MonoBehaviour {
         for (int j = height - 1; j >= 0; j--) {
             for (int i = 0; i < width; i++) {
                 Vector3 position = new Vector3(i * 1f, 0, j * 1f);
-                if (maze[i, j] == 1) Instantiate(wallPrefab, position, Quaternion.identity);
-                else Instantiate(pathPrefab, position, Quaternion.identity);
+                if (maze[i, j] == 1) mazeObj[i, j] = Instantiate(wallPrefab, position, Quaternion.identity);
+                else mazeObj[i, j] = Instantiate(pathPrefab, position, Quaternion.identity);
             }
         }
     }
