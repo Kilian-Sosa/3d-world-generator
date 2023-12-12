@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class WallsGenerator : MonoBehaviour {
+public class WallsGenerator : ScriptableObject {
     private GameObject wallPrefab;
     private int width, height, large;
     private float detail, seed;

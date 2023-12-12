@@ -306,7 +306,7 @@ Transform:
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 38.6, z: 7.5}
+  m_LocalPosition: {x: 39, y: 94.2, z: 47.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -336,11 +336,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c73a7c5f223676a4084609a49e4df435, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  width: 20
-  height: 20
-  large: 20
-  detail: 1
-  seed: 1
+  width: 100
+  height: 100
+  large: 100
+  detail: 20
+  seed: 300000
   wallPrefab: {fileID: 2593311416800863536, guid: 38bd3613979eab54caf86bd6b21ce3bd, type: 3}
   pathPrefab: {fileID: 2593311416800863536, guid: 80ea576266600b0418db6ba281a5e6eb, type: 3}
 --- !u!114 &963194231
