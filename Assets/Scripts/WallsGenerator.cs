@@ -5,9 +5,6 @@ public class WallsGenerator : ScriptableObject {
     private int width, height, large;
     private float detail, seed;
 
-
-    void Start() {
-    }
     public void Generate(GameObject wallPrefab, int width, int height, int large, float detail, float seed) {
         this.wallPrefab = wallPrefab;
         this.width = width;
